@@ -1,3 +1,11 @@
+class ImmutablePoint {
+  static final ImmutablePoint origin = const ImmutablePoint(0, 0);
+
+  final num x, y;
+
+  const ImmutablePoint(this.x, this.y);
+}
+
 void main() {
   final name = 'Bob';
   var foo = const [];
@@ -7,8 +15,9 @@ void main() {
   print(aconstList);
 
   // Immutable map
-  // const pointAndLine = const {
-  //   'point': const [const ImmutablePoint(0, 0)],
-  //   'line': const [const ImmutablePoint(1, 10), const ImmutablePoint(-2, 11)],
-  // };
+  const pointAndLine = const {
+    'point': const [ ImmutablePoint(0, 0)],
+    'line': const [ ImmutablePoint(1, 10), const ImmutablePoint(-2, 11)],
+  };
+  print(pointAndLine);
 }
