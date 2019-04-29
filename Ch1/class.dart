@@ -2,11 +2,13 @@ class Point {
   num x;
   num y;
 
-  Point(num x, num y) {
-    this.x = x;
-    this.y = y;
-  }
+  // Point(num x, num y) {
+  //   this.x = x;
+  //   this.y = y;
+  // }
 
+  // This is the same as above.
+  Point(this.x, this.y);
   void log() {
     print("x: " + this.x.toString() + ",y: " + this.y.toString());
   }
